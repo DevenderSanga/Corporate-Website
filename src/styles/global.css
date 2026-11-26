@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+
+  --primary: #6257f5;
+  --primary-hover: #5145df;
+
+  --bg: #f7f8fc;
+  --surface: #ffffff;
+  --surface-secondary: #f0f1f8;
+
+  --text: #17182b;
+  --muted: #777b91;
+  --border: #e7e8f0;
+
+  --header-bg: rgba(255,255,255,0.92);
+
+  --shadow: 0 8px 30px rgba(20,20,50,0.06);
+}
+
+[data-theme="dark"] {
+  --bg: #10111c;
+  --surface: #191a29;
+  --surface-secondary: #222337;
+
+  --text: #f5f5ff;
+  --muted: #a0a2b8;
+  --border: #303147;
+
+  --header-bg: rgba(25,26,41,0.94);
+
+  --shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1200px, 90%);
+  margin: auto;
+}
+
+.section {
+  padding: 90px 0;
+}
+
+.section-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  margin-top: 14px;
+  line-height: 1.8;
+}
+
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 25px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 65px 0;
+  }
+
+  .container {
+    width: 92%;
+  }
+}
